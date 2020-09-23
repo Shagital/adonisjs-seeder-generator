@@ -3,7 +3,7 @@
 ![npm (scoped)](https://img.shields.io/npm/v/@shagital/adonisjs-seeder-generator)
 ![NPM](https://img.shields.io/npm/l/@shagital/adonisjs-seeder-generator)
 
-This package allows you easily generate seeder files for your [AdonisJS](https://adonisjs.com/) app from existing Database table files!
+This package allows you easily generate seeder files for your [AdonisJS](https://adonisjs.com/) app from existing Database table data!
 
 ## Currently Supported
 - MySQL
