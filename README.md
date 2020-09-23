@@ -62,6 +62,61 @@ The table content will be wiped! ENSURE THE TABLE IS BACKED UP JUST IN CASE!!!
 adonis seed:generate --force
 ```
 
+## Example Seeder file
+```js
+'use strict';
+
+/*
+|--------------------------------------------------------------------------
+| CitiesSeeder
+|--------------------------------------------------------------------------
+|
+| Make use of the Factory instance to seed database with dummy data or
+| make use of Lucid models directly.
+|
+*/
+
+const Database = use('Database');
+
+class CitiesSeeder {
+    async run () {
+       await Database.connection('mysql').table('cities').truncate();
+        let data = [
+ 
+    {
+        "id": 219,
+        "name": "Kuçovë",
+        "country_id": 3,
+        "state_id": 629,
+        "country_code": "AL",
+        "state_code": "BR",
+        "latitude": 40.80028,
+        "longitude": 19.91667
+    },
+    {
+        "id": 280,
+        "name": "Çorovodë",
+        "country_id": 3,
+        "state_id": 629,
+        "country_code": "AL",
+        "state_code": "BR",
+        "latitude": 40.50417,
+        "longitude": 20.22722
+    }
+...
+];
+        var i, j, temparray, chunk = 1000;
+        for (i = 0,j = data.length; i < j; i += chunk) {
+            temparray = data.slice(i, i+chunk);
+            await Database.connection('mysql').table('cities').insert(temparray);
+        }
+
+    }
+}
+
+module.exports = CitiesSeeder;
+
+```
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.

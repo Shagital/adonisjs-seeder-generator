@@ -1,6 +1,6 @@
 {
   "name": "@shagital/adonisjs-seeder-generator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An AdonisJS (nodejs) package to generate seeder files from existing DB table data",
   "main": "index.js",
   "keywords": [
