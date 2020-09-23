@@ -1,0 +1,28 @@
+'use strict';
+
+/*
+|--------------------------------------------------------------------------
+| {{pascalTableName}}Seeder
+|--------------------------------------------------------------------------
+|
+| Make use of the Factory instance to seed database with dummy data or
+| make use of Lucid models directly.
+|
+*/
+
+const Database = use('Database');
+
+class {{pascalTableName}}Seeder {
+    async run () {
+       {{truncate}}
+        let data = {{data}};
+        var i, j, temparray, chunk = 1000;
+        for (i = 0,j = data.length; i < j; i += chunk) {
+            temparray = data.slice(i, i+chunk);
+            await Database{{connection}}.table('{{tableName}}').insert(temparray);
+        }
+
+    }
+}
+
+module.exports = {{pascalTableName}}Seeder;

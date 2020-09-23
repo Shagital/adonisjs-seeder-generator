@@ -1,0 +1,27 @@
+{
+  "name": "@shagital/adonisjs-seeder-generator",
+  "version": "1.0.0",
+  "description": "An AdonisJS (nodejs) package to generate seeder files from existing DB table data",
+  "main": "index.js",
+  "keywords": [
+    "adonisjs",
+    "nodejs",
+    "seeder",
+    "generator",
+    "mysql",
+    "postgresql",
+    "sqlite"
+  ],
+  "author": "Zacchaeus Bolaji <zacchaeus@shagital.com>",
+  "license": "MIT",
+  "devDependencies": {
+
+  },
+  "dependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shagital/adonisjs-seeder-generator.git"
+  },
+  "homepage": "https://github.com/Shagital/adonisjs-seeder-generator"
+}
