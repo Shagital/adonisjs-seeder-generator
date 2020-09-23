@@ -50,7 +50,6 @@ class MySql extends SeederGenerator {
       Object.keys(tableColumns[0]).forEach(key => {
         let tableColumn = tableColumns[0][key];
         this.tables[tableName][tableColumn.COLUMN_NAME] = {type:tableColumn['COLUMN_TYPE'].split('(')[0].toLowerCase()};
-        console.log(tableColumn.COLUMN_NAME, this.tables[tableName][tableColumn.COLUMN_NAME]['type']);
       });
     }
     return this;
